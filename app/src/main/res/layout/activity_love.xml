@@ -1,0 +1,610 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg"
+    tools:context=".LoveActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:clipChildren="false">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layoutDirection="rtl"
+            android:layout_marginBottom="10dp"
+            app:titleTextColor="@android:color/white"
+            android:id="@+id/toolBar"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:clipChildren="false">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:translationX="5dp">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+                    <View
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:background="@drawable/zodiak_shadow"/>
+                </FrameLayout>
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true">
+
+                    <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                        android:id="@+id/pulsator"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center"
+                        app:pulse_count="5"
+                        app:pulse_duration="2000"
+                        app:pulse_repeat="0"
+                        app:pulse_color="#526499"
+                        app:pulse_interpolator="Linear">
+                        <View
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:id="@+id/view1"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/zodiak_bg"/>
+
+                    </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+                    <LinearLayout
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:gravity="center"
+                        android:id="@+id/male_lt"
+                        android:translationX="5dp"
+                        android:layout_gravity="center_vertical"
+                        >
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:tint="@android:color/white"
+                            android:id="@+id/male"
+                            android:src="@drawable/ic_male"/>
+                    </LinearLayout>
+
+
+
+                </FrameLayout>
+
+
+            </RelativeLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:clipChildren="false"
+                >
+                <View
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="end"
+                    android:background="@drawable/zodiak_shadow"
+                    android:translationX="65dp"
+                    />
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1.5dp"
+                    android:background="#4E5C93"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:clipChildren="false">
+
+
+                <pl.bclogic.pulsator4droid.library.PulsatorLayout
+                    android:id="@+id/pulsator1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    app:pulse_count="5"
+                    android:clipChildren="false"
+                    android:translationX="-5dp"
+                    app:pulse_duration="2000"
+                    app:pulse_repeat="0"
+                    app:pulse_color="#526499"
+                    app:pulse_interpolator="Linear">
+                    <View
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:id="@+id/view2"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/zodiak_bg"/>
+
+                </pl.bclogic.pulsator4droid.library.PulsatorLayout>
+
+
+
+
+
+                <LinearLayout
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:id="@+id/female_lt"
+                    android:layout_gravity="center_vertical"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:id="@+id/female"
+                        android:tint="@android:color/white"
+                        android:src="@drawable/ic_female"/>
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:text="اختر برجك"
+            android:padding="5dp"
+            android:textAlignment="center"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/text_bg">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt4"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo4"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="السرطان"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="6.21-7.22"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt3"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo3"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الجوزاء"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="5.21-6.20"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt2"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo2"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الثور"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="4.20-5.20"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt1"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo1"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الحمل"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3.21-4.19"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt8"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/logo8"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="العقرب"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="10.23-11.21"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt7"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo7"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الميزان"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="9.23-10.22"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt6"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo6"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="العذراء"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="8.23-9.22"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt5"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo5"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الأسد"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="7.23-8.22"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt12"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo12"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الحوت"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="3.21-4.19"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt11"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo11"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الدلو"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="1.20-2.18"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt10"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo10"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="الجدي"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="12.22-1.19"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:id="@+id/lt9"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/logo9"
+                        android:tint="@android:color/white"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="القوس"
+                        android:padding="3dp"
+                        android:textAlignment="center"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/white"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="11.22-12.21"
+                        android:textAlignment="center"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/white"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:id="@+id/check_lt"
+        android:clipChildren="false">
+
+        <View
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:minWidth="180dp"
+            android:background="@drawable/btn_bg"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_check_mark"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"/>
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

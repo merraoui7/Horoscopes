@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/nav_item_icon1"
+        android:title="المميزات" />
+
+    <item
+        android:id="@+id/navigation_horo"
+        android:icon="@drawable/nav_item_icon2"
+        android:title="الأبراج" />
+
+    <item
+        android:id="@+id/navigation_love"
+        android:icon="@drawable/nav_item_icon3"
+        android:title="التوافق" />
+
+
+
+</menu>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/k"
+    tools:context=".LoveArtActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolBar"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/text_bg"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@+id/toolBar">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp">
+
+
+
+            <me.itangqi.waveloadingview.WaveLoadingView
+                android:id="@+id/waveLoadingView"
+                android:layout_width="100dp"
+                android:layout_height="90dp"
+                android:layout_gravity="center"
+                app:wlv_borderColor="@color/colorAccent"
+                app:wlv_progressValue="90"
+                app:wlv_borderWidth="0dp"
+                app:wlv_shapeType="rectangle"
+                app:wlv_round_rectangle="true"
+                app:wlv_triangle_direction="north"
+                app:wlv_waveAmplitude="70"
+                app:wlv_waveColor="@color/colorAccent"/>
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:background="@drawable/heart_cover"/>
+
+        </FrameLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="الرجل الحمل و المرأة الأسد"
+            android:textSize="20sp"
+            android:id="@+id/title"
+            android:textStyle="bold"
+            android:layout_marginBottom="5dp"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/text"
+            android:text="العلاقة هادئة وحميمة بينهما ترتكز على التفاهم الروحي العميق كلاهما يغرق في الأحلام فتتعقد الامور وتولد المشاكل لذا قد لا تكون العلاقة عملية.عندما يتكلمان عن السعادة الروحية لا تفهم شيئا.كل واحد منهما يحتاج الى الآخر.لكنهما يحتاجان الى ثالث يوقظهما من عالم الأحلام كل دقيقة.كلاهما لبقان في التعامل,ناعمان في الحب وهذا ما ينشده كل واحد عند اآخر المرأة الحوت تكره الرجل القاسي وتفضله رقيقا والرجل الحوت تصدمه المرأة القوية المتعجرفة فهو يقع ضحية مع إمرأة كهذه.الخطر في هذه العلاقة انهما حساسان ويفتقران الثقة بالنفس وهنا يأتي دور المرأة الحوت العلاقة هادئة وحميمة ورومانسية للغاية.لا صراع ولا تحدي."
+            android:textSize="18sp"
+            android:textColor="@android:color/white"/>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

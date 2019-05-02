@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Fragments.DailyLoveFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/pLayout"
+        android:gravity="center"
+        >
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/animation_view"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_repeatCount="9999"
+            app:lottie_rawRes="@raw/galaxy"
+            app:lottie_autoPlay="true" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/cLayout"
+        android:orientation="vertical">
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="20dp"
+                android:layout_margin="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_bg"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="برج الثور اليوم"
+                        android:textSize="22sp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:paddingTop="10dp"
+                        android:id="@+id/title"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:textColor="@android:color/white"
+                        android:textSize="18sp"
+                        android:id="@+id/textView" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/text_bg"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:paddingBottom="10dp"
+                    android:id="@+id/love_lt"
+                    android:gravity="center">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="توافق الابراج"
+                        android:textSize="22sp"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/white"
+                        android:textStyle="bold"
+                        android:textAllCaps="true"
+                        android:paddingTop="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/love_logo"
+                        android:padding="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="تعرف على نسبة التوافق بين برجك و باقي الأبراج"
+                        android:layout_marginBottom="10dp"
+                        android:textColor="@android:color/white"
+                        android:gravity="center"
+                        android:textAllCaps="true"
+                        android:paddingTop="10dp"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </LinearLayout>
+</FrameLayout>

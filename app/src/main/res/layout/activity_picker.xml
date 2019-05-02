@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/k"
+    tools:context=".PickerActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="إختر برجك"
+            android:textSize="30sp"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:paddingBottom="150dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img1"
+            android:alpha="1"
+            android:layout_gravity="center"
+            android:id="@+id/image1"
+            />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img2"
+            android:layout_gravity="center"
+            android:id="@+id/image2"
+            android:alpha="0" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img3"
+            android:id="@+id/image3"
+            android:layout_gravity="center"
+            android:alpha="0" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img4"
+            android:alpha="0"
+            android:layout_gravity="center"
+            android:id="@+id/image4" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img5"
+            android:layout_gravity="center"
+            android:id="@+id/image5"
+            android:alpha="0" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img6"
+            android:id="@+id/image6"
+            android:layout_gravity="center"
+            android:alpha="0" />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img7"
+            android:alpha="0"
+            android:layout_gravity="center"
+            android:id="@+id/image7"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img8"
+            android:alpha="0"
+            android:layout_gravity="center"
+            android:id="@+id/image8"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img9"
+            android:alpha="0"
+            android:layout_gravity="center"
+            android:id="@+id/image9"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img10"
+            android:alpha="0"
+            android:layout_gravity="center"
+            android:id="@+id/image10"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img11"
+            android:alpha="0"
+            android:layout_gravity="center"
+            android:id="@+id/image11"
+            />
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/img12"
+            android:alpha="0"
+            android:layout_gravity="center"
+            android:id="@+id/image12"
+            />
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:layout_width="25dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/left"
+                android:layout_gravity="center"
+                android:tint="@android:color/white"
+                android:id="@+id/left"
+                android:paddingTop="40dp"/>
+
+        </FrameLayout>
+
+        <com.yarolegovich.discretescrollview.DiscreteScrollView
+            android:id="@+id/picker"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:dsv_orientation="horizontal"
+            />
+
+        <FrameLayout
+            android:layout_width="25dp"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/left"
+                android:layout_gravity="center"
+                android:id="@+id/right"
+                android:tint="@android:color/white"
+                android:rotation="180"
+                android:paddingBottom="30dp"/>
+        </FrameLayout>
+
+
+
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:id="@+id/check_lt">
+
+            <View
+                android:layout_width="180dp"
+                android:layout_height="40dp"
+                android:minWidth="180dp"
+                android:background="@drawable/btn_bg"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_check_mark"
+                android:layout_centerInParent="true"
+                android:layout_gravity="center"/>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ما هو برجي ؟"
+            android:textColor="@android:color/darker_gray"
+            android:id="@+id/datePicker"
+            android:background="@drawable/text_bg_picker"
+            android:paddingTop="3dp"
+            android:paddingBottom="5dp"
+            android:paddingEnd="20dp"
+            android:paddingStart="20dp"
+            android:layout_marginBottom="5dp"
+            />
+    </LinearLayout>
+
+
+</RelativeLayout>
