@@ -162,21 +162,6 @@ public class MainActivity extends AppCompatActivity {
         ft.commit();
 
 
-        Calendar calendar = Calendar.getInstance();
-
-
-        //set notification for date --> 8th January 2015 at 9:06:00 PM
-
-        calendar.setTimeInMillis(System.currentTimeMillis());
-        calendar.set(Calendar.HOUR_OF_DAY, 10);
-        calendar.set(Calendar.MINUTE, 0);
-        calendar.set(Calendar.SECOND, 1);
-
-        Intent myIntent = new Intent(MainActivity.this, MyReceiver.class);
-        PendingIntent pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, myIntent,0);
-
-        AlarmManager alarmManager = (AlarmManager)getSystemService(ALARM_SERVICE);
-        alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
 
     }
 
