@@ -25,14 +25,12 @@ public class SplachActivity extends AppCompatActivity {
         View view = findViewById(R.id.animated_bg);
 
         final Animation anim = new ScaleAnimation(
-                1.1f, 1.05f, // Start and end values for the X axis scaling
-                1.1f, 1.05f, // Start and end values for the Y axis scaling
-                Animation.RELATIVE_TO_SELF, 1f, // Pivot point of X scaling
-                Animation.RELATIVE_TO_SELF, 1f); // Pivot point of Y scaling
+                1.15f, 1.05f, // Start and end values for the X axis scaling
+                1.15f, 1.05f, // Start and end values for the Y axis scaling
+                Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
         anim.setDuration(5000);
 
-        anim.setRepeatMode(Animation.REVERSE);
-        anim.setRepeatCount(Animation.INFINITE);
         view.setAnimation(anim);
 
         final SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());

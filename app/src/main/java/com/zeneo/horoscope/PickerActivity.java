@@ -43,7 +43,6 @@ public class PickerActivity extends AppCompatActivity {
 
     List<Zodiak> list = new ArrayList<>();
 
-    List<ImageView> listimg = new ArrayList<>();
     DiscreteScrollView scrollView;
     TextView birthPicket;
 
@@ -51,9 +50,25 @@ public class PickerActivity extends AppCompatActivity {
     ImageView left , right;
     int page = 0;
 
+    int imgResources [] = {
+            R.drawable.img1,
+            R.drawable.img2,
+            R.drawable.img3,
+            R.drawable.img4,
+            R.drawable.img5,
+            R.drawable.img6,
+            R.drawable.img7,
+            R.drawable.img8,
+            R.drawable.img9,
+            R.drawable.img10,
+            R.drawable.img11,
+            R.drawable.img12,
+
+    };
+
+
     private DatePickerDialog.OnDateSetListener mDateSetListener;
 
-    @TargetApi(Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,14 +78,6 @@ public class PickerActivity extends AppCompatActivity {
         RelativeLayout check_lt = findViewById(R.id.check_lt);
         check_lt.getChildAt(0).setSelected(true);
 
-
-        float dip = 50f;
-        Resources r = getResources();
-        float px = TypedValue.applyDimension(
-                TypedValue.COMPLEX_UNIT_DIP,
-                dip,
-                r.getDisplayMetrics()
-        );
 
         left = findViewById(R.id.left);
         right = findViewById(R.id.right);
@@ -91,19 +98,7 @@ public class PickerActivity extends AppCompatActivity {
         list.add(new Zodiak("الحوت","20/3-19/2",R.drawable.logo12));
 
 
-        listimg.add((ImageView)findViewById(R.id.image1));
-        listimg.add((ImageView)findViewById(R.id.image2));
-        listimg.add((ImageView)findViewById(R.id.image3));
-        listimg.add((ImageView)findViewById(R.id.image4));
-        listimg.add((ImageView)findViewById(R.id.image5));
-        listimg.add((ImageView)findViewById(R.id.image6));
-        listimg.add((ImageView)findViewById(R.id.image7));
-        listimg.add((ImageView)findViewById(R.id.image8));
-        listimg.add((ImageView)findViewById(R.id.image9));
-        listimg.add((ImageView)findViewById(R.id.image10));
-        listimg.add((ImageView)findViewById(R.id.image11));
-        listimg.add((ImageView)findViewById(R.id.image12));
-
+        final ImageView zodiakImage = findViewById(R.id.image1);
 
 
 
@@ -132,28 +127,12 @@ public class PickerActivity extends AppCompatActivity {
             @Override
             public void onScrollEnd(@NonNull RecyclerView.ViewHolder currentItemHolder, int adapterPosition) {
 
-                for (int i = 0 ; i < listimg.size() ; i++){
-                    if(i==(adapterPosition+9)%12){
-                        listimg.get(i).setAlpha(1f);
-                    }else listimg.get(i).setAlpha(0f);
-                }
-                page = (adapterPosition+9)%12;
+                zodiakImage.setImageResource(imgResources[(adapterPosition+9)%12]);
 
             }
 
             @Override
             public void onScroll(float scrollPosition, int currentPosition, int newPosition, @Nullable RecyclerView.ViewHolder currentHolder, @Nullable RecyclerView.ViewHolder newCurrent) {
-                Log.i("scrollp",scrollPosition+"");
-                Log.i("currentp",currentPosition+"");
-                Log.i("newp",newPosition+"");
-
-                if(scrollPosition<0){
-                    listimg.get((currentPosition+9)%12).setAlpha(1+scrollPosition);
-                    listimg.get((newPosition+9)%12).setAlpha(-scrollPosition);
-                } else {
-                    listimg.get((currentPosition+9)%12).setAlpha(1-scrollPosition);
-                    listimg.get((newPosition+9)%12).setAlpha(scrollPosition);
-                }
 
             }
         });
